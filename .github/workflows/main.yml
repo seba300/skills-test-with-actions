@@ -12,6 +12,12 @@ jobs:
 
       - name: Check
         run: echo ${{github.ref}}
+
+      - if: ${{ github.ref != 'refs/heads/main'}}
+        run: echo "hej false"
+
+      - if: ${{ github.ref == 'refs/heads/main'}}
+        run: echo "hej true"
         
       - name: Create Release
         id: create_release
