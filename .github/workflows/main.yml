@@ -29,4 +29,4 @@ jobs:
             - First Change
             - Second Change
           draft: false
-          prerelease: ${{env.IS_PRE_RELEASE}}
+          prerelease: "${{env.IS_PRE_RELEASE}}"
