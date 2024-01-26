@@ -10,8 +10,8 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - if: ${{ github.ref != 'refs/heads/main'}}
-        run: echo "IS_PRE_RELEASE=true" >> "GITHUB_ENV"
+      - name: Check
+        run: echo github.ref
         
       - name: Create Release
         id: create_release
