@@ -14,7 +14,7 @@ jobs:
         run: echo ${{github.ref}}
 
       - if: ${{ github.ref == 'refs/heads/main'}}
-        run: echo "IS_PRE_RELEASE=true" >> "GITHUB_ENV"
+        run: echo "IS_PRE_RELEASE=\"true\"" >> "GITHUB_ENV"
         
       - name: Create Release
         id: create_release
